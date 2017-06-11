@@ -1,0 +1,7 @@
+.heading-top{
+  width: 100%;
+  border: 1px solid gray;
+}
+.divs{
+display:none;
+}
