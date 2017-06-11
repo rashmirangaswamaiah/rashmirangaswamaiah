@@ -1,0 +1,44 @@
+.header{
+  width: 100%;
+  border: 1px solid gray;
+  background-color: green;
+  text-align: center;
+  color: white;
+  clear: left;
+}
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+li{
+  float: left;
+}
+li a{
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover{
+  background-color:gray;
+}
+.footer{
+  width: 100%;
+  border: 1px solid gray;
+  background-color: green;
+  text-align: center;
+  color: white;
+  clear: left;
+  position: fixed;
+  bottom: 0;
+}
+.divs{
+  display: none;
+}
+#divHome{
+  display: block;
+}
