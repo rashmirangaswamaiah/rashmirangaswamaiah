@@ -48,7 +48,7 @@
   padding: 16px;
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
   margin-top: -22px;
   border-radius: 0 3px 3px 0;
 }
@@ -122,4 +122,21 @@ first one ("home"). show the link that contains should open and close the topnav
       display: block;
       text-align: left;
     }
+
+}
+.dot{
+  cursor: pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 70%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover{
+  background-color: #717171;
+}
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
 }
