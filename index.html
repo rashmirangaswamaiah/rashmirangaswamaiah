@@ -4,7 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="MainScreen.css">
+<script type="text/javascript"></script>
 <script src="MainScreenJavaScript.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <style>
   body{
     font-family: "Times New Roman", Georgia, Serif;
@@ -17,7 +20,7 @@
 
   <!-- Navbar top -->
   <div class="topnav" id="myTopnav">
-    <a href="#home" class="colors" >HOME</a>
+    <a href="#home" class="colors" id="home">HOME</a>
     <a href="Resume.html"  class="colors" >ABOUT</a>
     <a href="contact.html" class="colors" >CONTACT</a>
     <a href="#icon" class="icon" onclick="myFunction()">&#9776;</a>
@@ -32,12 +35,21 @@
 
     <div class="mySlides fade">
       <img src="travel2.jpg" class="image">
-       <div class="text">Like to travel</div>
+      <div class="text" >
+       <button id="travelButton" onclick="loadExternalHtml()">Travel</button>
+     </div>
     </div>
 
     <div class="mySlides fade">
       <img src="education.jpg" class="image">
       <div class="text">Education and Background</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="cook1.jpg" class="image">
+      <div class="text" >
+        <button id="cookButton" onclick="loadExternalHtml()">Love for Cooking</button>
+      </div>
     </div>
 
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -48,12 +60,147 @@
       <span class="dot" onclick="currentSlide(1)"></span>
       <span class="dot" onclick="currentSlide(2)"></span>
       <span class="dot" onclick="currentSlide(3)"></span>
-
+      <span class="dot" onclick="currentSlide(4)"></span>
   </div>
 
-<script>
+<div>
+
+  <div class="thirdDiv" id="homePage">
+    <div id="homePageImage" class="fontFamily">
+          <img src="grad.jpg" alt="graduation" style="width:250px;height:450px;" >
+    </div>
+    <div id="content">
+      <h1>Rashmi Rangaswamaiah</h1>
+      <p class="intro">Currently, I am working as a Software Developer (Java) at Project Real Estate AG. I have pursued my Masters in Computer Science and Media.
+        I have completed my Bachelors in Infomation Science and Engineering from Visvesvaraya Technological Universty, Bangalore, India.
+      </p>
+      <p class="intro">I am highly interested to gain more knowledge and experience in the new technologies. I am very passionate about the work I do.
+        I have gained strong experience of working for projects within a team as well as individually and have an exposure to solve complex
+        tasks.
+      </p>
+      <p class="intro">
+        In free time, I would love to cook, watch movies and have a passion for dance. Also, I have an interest to learn new things.
+      </p>
+    </div>
+  </div>
+<div class="thirdDiv" id="foodBlog">
+  <div class="fontFamily">
+    I love spending time with my friends and family.<br> The simplest
+    things in life give me the most pleasure: cooking a good meal, enjoying with my dear ones.
+  </div>
+  <div class="responsive-images" >
+    <div class="gallery">
+      <img src="gobi.jpg"  alt="masalpuri" style="width:90%;height:180px;">
+      <h3>Gobi manchurian</h3>
+      <div class="desc">
+        It is a street food mainly served as an evening snack in several parts of india.
+        It is one of my favorite chat.
+      </div>
+    </div>
+  </div>
+    <div class="responsive-images" >
+      <div class="gallery">
+      <img src="kabab.jpg" alt="masalpuri" style="width:90%;height:180px;">
+      <h3>Chicken Kebab</h3>
+      <div class="desc">
+        It is a spicy, deep-fried chicken. Dressed with onions, corriander and chili.
+      </div>
+    </div>
+  </div>
+    <div class="responsive-images" >
+      <div class="gallery">
+      <img src="masal.jpg"   alt="masalpuri" style="width:90%;height:180px;">
+      <h3>Indian chat Masalpuri</h3>
+      <div class="desc">It is an Indian Chinese fried cauliflower food item popular in India.It is super delicious and tasty.
+      </div>
+    </div>
+  </div>
+</div>
+<!--<div class="thirdDiv" id="travel">
+  <div class="travelHeading">
+    <h1>Let's start the journey!!</h1>
+  </div>
+  <div class="row">
+      <div class="travelImage">
+        <img src="cook.jpg" style="width:70%;min-height:70px">
+      </div>
+      <div class="travelDescription">
+        <p>The first country which I visited was Germany for
+          my Higher studies. It is a street food mainly served as an evening snack in several parts of india.
+        </p>
+
+        </h3>
+      </div>
+  </div>-->
+  <div class="thirdDiv" id="travel">
+    <div class="travelHeading">
+      <h1>Let's start the journey!!</h1>
+    </div>
+
+    <div>
+    <div id="travelImage" class="fontFamily">
+          <img src="frankfurt.jpg" class="img-circle" alt="graduation" style="width:230px;height:200px;" >
+    </div>
+    <div id="travelContent">
+      <h1>Germany</h1>
+      <p class="intro">Currently, I am working as a Software Developer (Java) at Project Real Estate AG. I have pursued my Masters in Computer Science and Media.
+        I have completed my Bachelors in Infomation Science and Engineering from Visvesvaraya Technological Universty, Bangalore, India.
+      </p>
+    </div>
+  </div>
+<!--Clear left is used to align divs one below the other -->
+
+    <div style="clear:left">
+    <div id="travelImage" class="fontFamily">
+          <img src="austria2.jpg" class="img-circle" alt="graduation" style="width:230px;height:200px;" >
+    </div>
+    <div id="travelContent">
+      <h1>Austria</h1>
+      <p class="intro">Currently, I am working as a Software Developer (Java) at Project Real Estate AG. I have pursued my Masters in Computer Science and Media.
+        I have completed my Bachelors in Infomation Science and Engineering from Visvesvaraya Technological Universty, Bangalore, India.
+      </p>
+    </div>
+  </div>
+
+  <div style="clear:left">
+  <div id="travelImage" class="fontFamily">
+        <img src="belgium.jpg" class="img-circle" alt="graduation" style="width:230px;height:200px;" >
+  </div>
+  <div id="travelContent">
+    <h1>Belgium</h1>
+    <p class="intro">Currently, I am working as a Software Developer (Java) at Project Real Estate AG. I have pursued my Masters in Computer Science and Media.
+      I have completed my Bachelors in Infomation Science and Engineering from Visvesvaraya Technological Universty, Bangalore, India.
+    </p>
+  </div>
+</div>
+  </div>
+  </div>
+
+</div>
+</div>
+
+<script type="text/javascript">
   var slideIndex =1;
   showSlides(slideIndex);
+
+  function loadExternalHtml(){
+      $(document).ready(function(){
+          $("#home").click(function(){
+            $(".thirdDiv").hide();
+            $("#homePage").show();
+          });
+        $("#cookButton").click(function(){
+         $(".thirdDiv").hide();
+          $("#foodBlog").show();
+        });
+        $("#travelButton").click(function(){
+          $(".thirdDiv").hide();
+          $("#travel").show();
+        });
+      });
+    }
+
+
 </script>
 
 </body>
